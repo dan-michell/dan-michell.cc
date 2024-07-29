@@ -21,7 +21,7 @@
     kleur "^4.1.5"
     yargs "^17.7.2"
 
-"@astrojs/compiler@^2.9.0", "@astrojs/compiler@^2.9.1":
+"@astrojs/compiler@^2.7.0", "@astrojs/compiler@^2.9.0", "@astrojs/compiler@^2.9.1":
   version "2.9.2"
   resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-2.9.2.tgz#c01dcdb14dc938758e66f9856934b83b6cd986d1"
   integrity sha512-Vpu0Ffsj8SoV+N0DFHlxxOMKHwSC9059Xy/OlG1t6uFYSoJXxkBC2WyF6igO7x10V+8uJrhOxaXr3nA90kJXow==
@@ -97,6 +97,18 @@
     is-docker "^3.0.0"
     is-wsl "^3.0.0"
     which-pm-runs "^1.1.0"
+
+"@astrojs/ts-plugin@^1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@astrojs/ts-plugin/-/ts-plugin-1.9.0.tgz#31f780cd42740bbb466772a2502bb19ab5959615"
+  integrity sha512-QastYNlKF2I0oOksKRm3bG8auk2AlyD6be7ptHzSHKj/ikUvK9ObnS2ruGFh0h8aQ760Qw7aEJ9JZT/IZ7t46A==
+  dependencies:
+    "@astrojs/compiler" "^2.7.0"
+    "@jridgewell/sourcemap-codec" "^1.4.15"
+    "@volar/language-core" "~2.4.0-alpha.15"
+    "@volar/typescript" "~2.4.0-alpha.15"
+    semver "^7.3.8"
+    vscode-languageserver-textdocument "^1.0.11"
 
 "@babel/code-frame@^7.24.7":
   version "7.24.7"
