@@ -1,5 +1,5 @@
 ---
-import Sidebar from "../components/Sidebar.astro"
+import Sidebar from "../components/sidebar/Sidebar.astro"
 
 interface Props {
 	title: string;
@@ -18,10 +18,12 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<div class="w-[70vw] border-2 border-black m-auto flex">
-		<Sidebar></Sidebar>
-		<body class="w-[85vw] border-2">
-			<slot />
-		</body>
-	</div>
+	<body class="min-h-[100vh] border-2 border-red-500 p-[1vw]"> 
+		<div class="sm:w-[70vw] h-full m-auto border-2 border-blue-500 flex">
+			<Sidebar></Sidebar>
+			<div class="w-[75vw] border-black border-2">
+				<slot />
+			</div>
+		</div>
+	</body>
 </html>
