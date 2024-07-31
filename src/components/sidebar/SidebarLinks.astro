@@ -2,10 +2,12 @@
 interface Props {
 	
 }
+
+const links: Array<string> = ["One", "Two", "Three"]
 ---
 
 <ul>
-	<li>One</li>
-	<li>TWo</li>
-	<li>THRE</li>
+	{links.map((link) => (
+		<li>{link}</li>
+	))}
 </ul>
