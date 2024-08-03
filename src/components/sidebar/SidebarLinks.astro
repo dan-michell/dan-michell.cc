@@ -1,13 +1,21 @@
 ---
+import LinkIcon from '../common/LinkIcon.astro'
+
 interface Props {
 	
 }
 
-const links: Array<string> = ["One", "Two", "Three"]
+const link_props = [
+	{
+		href: "",
+		displayName: "Github",
+		iconName: "github", 
+		size: "32"
+	}
+]
 ---
-
-<ul>
-	{links.map((link) => (
-		<li>{link}</li>
-	))}
-</ul>
+<div>
+	{link_props.map((iconProps) => {
+	return <LinkIcon {...iconProps} />
+	})}
+</div>

@@ -1,14 +1,13 @@
 ---
 import SidebarLinks from "./SidebarLinks.astro"
+import SidebarHeader from "./SidebarHeader.astro"
 
 interface Props {
 
 }
 ---
 
-<div class = `border-2 border-black sm:w-[25vw] flex flex-col justify-between hidden sm:block`>
-	<div>
-		SIDEBAR
-		<SidebarLinks />	
-	</div>
+<div class = "border-2 p-2 sm:w-[25vw] flex flex-col justify-between hidden sm:block">
+	<SidebarHeader />	
+	<SidebarLinks />	
 </div>
