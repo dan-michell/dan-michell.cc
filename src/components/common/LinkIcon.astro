@@ -3,7 +3,7 @@ import { Icon } from 'astro-icon/components'
 
 interface Props {
 	href: string,
-	displayName: string,
+	displayName?: string,
 	iconName: string
 	size: string
 }
@@ -12,5 +12,5 @@ const {href, displayName, iconName, size} = Astro.props
 ---
 
 <div>
-	<a href={href} class="size">{displayName}<Icon name={iconName} class=`size-${size}` /></a>
+	<a href={href} class="flex items-center gap-1"><Icon name={iconName} class={`${size} hover:scale-110 transition-all`} /><p class="">{displayName}</p></a>
 </div>
