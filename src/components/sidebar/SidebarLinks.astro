@@ -5,16 +5,33 @@ interface Props {
 	
 }
 
+
 const link_props = [
 	{
-		href: "",
-		iconName: "github", 
-		size: "size-6"
+		href: "/",
+		displayName: "home"
+	},
+	{
+		href: "/blog",
+		displayName: "blog"
+	},
+	{
+		href: "/reading",
+		displayName: "reading"
+	},
+	{
+		href: "https://github.com/dan-michell",
+		displayName: "github",
+		newTab: true
+	},
+	{
+		href: "/about",
+		displayName: "about"
 	}
 ]
 ---
-<div>
-	{link_props.map((iconProps) => {
+<div class="">
+	{link_props.map(iconProps => {
 	return <LinkIcon {...iconProps} />
 	})}
 </div>

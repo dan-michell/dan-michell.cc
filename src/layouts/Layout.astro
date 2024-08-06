@@ -17,13 +17,13 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link type="image/png" sizes="32x32" rel="icon" href="/icons8-bicycle-32.png">
 		<meta name="generator" content={Astro.generator} />
-		<link href="https://fonts.googleapis.com/css2?family=B612+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet"/>
+		<link href="https://fonts.googleapis.com/css2?family=B612+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet"/>
 		<title>{title}</title>
 	</head>
-	<body class="min-h-screen h-full pt-[1vw] px-[1vw] font-karla flex flex-col justify-between transition-all"> 
-		<div class="sm:w-[70vw] h-full sm:mx-auto flex">
+	<body class="min-h-screen h-full w-full border-2 font-firasans flex flex-col justify-between items-center transition-all"> 
+		<div class="w-[85%] h-full mt-12 flex">
 			<Sidebar></Sidebar>
-			<div class="sm:w-[75vw] w-full">
+			<div class="w-full md:min-w-[75%]">
 				<slot />
 			</div>
 		</div>

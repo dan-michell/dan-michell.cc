@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        karla: ["Karla", "sans-serif"],
+        firasans: ["Fira Sans", "sans-serif"],
       },
     },
   },

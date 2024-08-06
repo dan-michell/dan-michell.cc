@@ -1,13 +1,53 @@
 ---
 import { Image } from "astro:assets";
-import Mountains from "../../assets/sidebar-mountains.jpeg"
+import X from "../../assets/header/norway-jostedalsbreen.jpeg"
 
 interface Props {
 
 }
+
+const imagesMetadata = [
+	{
+		src: "../../assets/header/norway-jostedalsbreen-1.jpeg",
+		caption: "Jostedalsbreen National Park, Norway, 2023"
+	},
+	{
+		src: "../../assets/header/norway-jostedalsbreen-2.jpeg",
+		caption: "Jostedalsbreen National Park, Norway, 2023"
+	},
+	{
+		src: "../../assets/header/norway-jostedalsbreen-3.jpeg",
+		caption: "Jostedalsbreen National Park, Norway, 2023"
+	},
+	{
+		src: "../../assets/header/norway-jostedalsbreen-2.jpeg",
+		caption: "Jostedalsbreen National Park, Norway, 2023"
+	},
+	{
+		src: "../../assets/header/norway-jostedalsbreen-2.jpeg",
+		caption: "Jostedalsbreen National Park, Norway, 2023"
+	},
+	{
+		src: "../../assets/header/norway-jostedalsbreen-2.jpeg",
+		caption: "Jostedalsbreen National Park, Norway, 2023"
+	},
+	{
+		src: "../../assets/header/norway-jostedalsbreen-2.jpeg",
+		caption: "Jostedalsbreen National Park, Norway, 2023"
+	},
+]
+
+const headerImages = import.meta.glob("../../assets/header/*.{jpg,jpeg,png}") 
+
+const today: number = new Date().getDay()
+const imageSelection = today < imagesMetadata.length ? imagesMetadata[today] : imagesMetadata[imagesMetadata.length - 1]
+
+
+const image = headerImages[imageSelection.src]
+const caption = imageSelection.caption
 ---
 
 <div class="">
-	<Image src={Mountains} alt="Mountains in the sidebar." class="" />
-	<h1 class="font-semibold sm:text-2xl mt-2">Dan Michell</h1>	
+	<Image src={image()} alt={caption} class="" />
+	<p class="text-xs text-gray-400 font-light italic">{caption}</p>
 </div>
