@@ -21,9 +21,9 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body class="min-h-screen h-full w-full border-2 font-firasans flex flex-col justify-between items-center transition-all"> 
-		<div class="w-[85%] h-full mt-12 flex">
+		<div class="w-[85%] h-full mt-12 flex gap-[5%]">
 			<Sidebar></Sidebar>
-			<div class="w-full md:min-w-[75%]">
+			<div class="w-full md:min-w-[70%]">
 				<slot />
 			</div>
 		</div>
