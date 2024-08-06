@@ -1,9 +1,11 @@
 ---
+import LinkIcon from './common/LinkIcon.astro'
 interface Props {
 	
 }
 ---
 
-<footer class="w-full h-16 flex flex-col justify-center items-center">
+<footer class="w-full h-16 flex justify-center items-center gap-2">
 	<p class="w-fit text-sm text-gray-400">Created by Dan Michell</p>
+	<LinkIcon href="https://github.com/dan-michell" iconName="github" size="size-6" newTab={true} />
 </footer>

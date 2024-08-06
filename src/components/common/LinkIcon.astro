@@ -13,5 +13,5 @@ const {href, displayName, iconName, size, newTab} = Astro.props
 ---
 
 <div>
-	<a href={href} class="flex items-center gap-1 mt-2" target={newTab ? "_blank" : "_self"}>{iconName ? <Icon name={iconName} class={`${size} hover:scale-110 transition-all`}/> : ""}<p class="hover:scale-110 transition-all">{displayName}</p></a>
+	<a href={href} class="flex items-center gap-1" target={newTab ? "_blank" : "_self"}>{iconName ? <Icon name={iconName} class={`${size} hover:scale-110 transition-all`}/> : ""}<p class="hover:scale-110 transition-all">{displayName}</p></a>
 </div>
