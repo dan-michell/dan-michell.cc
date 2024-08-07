@@ -27,7 +27,7 @@ const { title, slotAlignmentX, slotAlignmentY } = Astro.props;
 	<body class="min-h-screen  w-full font-firasans flex flex-col justify-between items-center transition-all"> 
 		<div class="w-[85%] flex flex-1">
 			<Sidebar></Sidebar>
-			<div class={`h-full flex md:min-w-[70%] ${slotAlignmentX} ${slotAlignmentY}`} transition:animate="fade">
+			<div class={`h-full flex md:w-[70%] ${slotAlignmentX} ${slotAlignmentY}`} transition:animate="fade">
 				<slot />
 			</div>
 		</div>
