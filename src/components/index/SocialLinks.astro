@@ -1,0 +1,24 @@
+---
+import LinkIcon from "../common/LinkIcon.astro"
+
+const link_props = [
+	{
+		href: "https://github.com/dan-michell",
+		iconName: "github",
+		size: "size-8",
+		newTab: true
+	},
+	{
+		href: "https://www.linkedin.com/in/dan-michell/",
+		iconName: "linkedin",
+		size: "size-8",
+		newTab: true
+	}
+]
+
+---
+<div class="flex gap-2">
+	{link_props.map(iconProps => {
+	return <LinkIcon {...iconProps} />
+	})}
+</div>

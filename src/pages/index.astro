@@ -1,13 +1,23 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import LinkIcon from '../components/common/LinkIcon.astro';
+import SocialLinks from '../components/index/SocialLinks.astro'
+import ProfilePicture from '../assets/profile-square.jpg'
+import { Image } from 'astro:assets'
 ---
 
-<Layout title="Dan Michell">
-	<div class="mt-12">
-		<a href="https://github.com/dan-michell/dan-michell.cc" target="_blank"><h1 class="text-2xl font-semibold">dan-michell.cc</h1></a>
-		<h3 class="text-sm text-gray-500">Thank you for checking out my website. Check out the blog where I occasionally share projects, recent learnings or thoughts.</h3>
+<Layout title="Dan Michell" slotAlignmentY="self-center" slotAlignmentX="justify-center">
+	<div class="flex flex-col items-center max-w-[50%] gap-4">
+		<div class="flex justify-center gap-4">
+			<div class="flex flex-col gap-2 w-[55%]">
+				<div>
+					<h1 class="text-2xl font-semibold">Dan Michell</h1>
+					<a href="https://github.com/dan-michell/dan-michell.cc" target="_blank"><h2 class="text-md">dan-michell.cc</h2></a>
+				</div>
+				<h3 class="text-sm text-gray-500">Thank you for checking out my website. Feel free to take a look at the <b><a href="/blog">blog</a></b> where I occasionally share projects or recent learnings.</h3>
+			</div>
+			<Image src={ProfilePicture} alt="Profile picture" class='self-center rounded-3xl shadow-lg shadow-gray-600 max-w-36 w-[45%]'/>
 		</div>
+		<SocialLinks />
 	</div>
 </Layout>
 
